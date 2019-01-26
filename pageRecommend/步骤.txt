@@ -1,0 +1,13 @@
+环境 python3 + linux
+
+
+1 在db_config.py 文件中设置好数据库连接属性
+2 实用命令 python3 httpServer.py 启动服务
+3 端口为 5633,可在httpServer.py 文件中更改
+4 命令:
+    重新训练数据
+    $ curl -i http://localhost:5633/train/
+
+    推荐排序 (user_id为登录页面的用户的id),其返回一个json格式的数据,如{页面id1:得分,页面id2:得分...}
+    再根据得分,推荐得分高的页面id
+    $ curl -i http://localhost:5633/recommend/user_id/

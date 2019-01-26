@@ -1,0 +1,20 @@
+步骤1:安装python以及第三方库
+    python版本我用的python3.6
+    所需其他的三方库:
+        xlrd
+        numpy
+        pandas
+        scipy
+        statsmodels
+        sqlalchemy
+        pymysql
+        keras
+        tensorflow
+
+步骤2:在db_config.py文件里面更新数据库信息,以及所需要的表名称:
+     需要提供一个数据库,和两个表名称,table1存放供需比数据,table2存放诸暨房价预测
+     注: 数据库要提前建好,表不用,有自动建表和导入数据的脚本
+
+步骤3: 首次运行,需要先跑一次createDbTable.py文件,如果表由其他方式建好,并且数据也导入好了,则跳过
+
+步骤4: 运行主函数 main.py, 可用shell写个脚本,每隔多长时间运行一次
